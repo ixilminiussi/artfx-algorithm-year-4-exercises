@@ -5,15 +5,19 @@
 #include <unordered_map>
 #include <vector>
 
-int solution(std::vector<int> &A) {
+int solution(std::vector<int> &A)
+{
     std::unordered_map<int, int> umap;
 
-    for (int a : A) {
+    for (int a : A)
+    {
         umap[a]++;
     }
 
-    for (auto e : umap) {
-        if (e.second & 1) {
+    for (auto e : umap)
+    {
+        if (e.second & 1)
+        {
             return e.first;
         }
     }
@@ -21,11 +25,13 @@ int solution(std::vector<int> &A) {
     return 0;
 }
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     std::vector<int> A;
     int K = 1;
 
-    for (int i = 1; i < argc; i++) {
+    for (int i = 1; i < argc; i++)
+    {
         A.push_back(std::strtoimax(argv[i], NULL, 10));
     }
 
@@ -35,8 +41,7 @@ int main(int argc, char *argv[]) {
         return 0;
 
     std::cout << "Use program arguments to try your own inputs:" << std::endl;
-    std::cout << "  ie ./exercise-2 1 2 12 7 4 1 12 4 2" << std::endl
-              << std::endl;
+    std::cout << "  ie ./exercise-3 1 2 12 7 4 1 12 4 2" << std::endl << std::endl;
     std::cout << "RUNNING CORRECTNESS TESTS" << std::endl;
     std::cout << std::endl << "Basic Examples :" << std::endl;
     A = {9, 3, 9, 3, 9, 7, 9};
@@ -52,7 +57,8 @@ int main(int argc, char *argv[]) {
 
     std::cout << "Small Random :" << std::endl;
     A.clear();
-    for (int i = 1; i <= 100; i++) {
+    for (int i = 1; i <= 100; i++)
+    {
         A.push_back(i);
         A.push_back(i);
     }
@@ -60,19 +66,19 @@ int main(int argc, char *argv[]) {
     test(A, 77, &solution);
 
     A.clear();
-    for (int i = 1; i <= 300; i++) {
+    for (int i = 1; i <= 300; i++)
+    {
         A.push_back(i);
         A.push_back(i);
     }
     A.push_back(123);
     test(A, 123, &solution);
 
-    std::cout << std::endl
-              << std::endl
-              << "RUNNING PERFORMANCE TESTS" << std::endl;
+    std::cout << std::endl << std::endl << "RUNNING PERFORMANCE TESTS" << std::endl;
     std::cout << std::endl << "Medium Random :" << std::endl;
     A.clear();
-    for (int i = 1; i <= 1000; i++) {
+    for (int i = 1; i <= 1000; i++)
+    {
         A.push_back(i);
         A.push_back(i);
     }
@@ -80,7 +86,8 @@ int main(int argc, char *argv[]) {
     testP(A, &solution);
 
     A.clear();
-    for (int i = 1; i <= 50001; i++) {
+    for (int i = 1; i <= 50001; i++)
+    {
         A.push_back(i);
         A.push_back(i);
     }
@@ -89,7 +96,8 @@ int main(int argc, char *argv[]) {
 
     std::cout << std::endl << "Large Ones :" << std::endl;
     A.clear();
-    for (int i = 1; i <= 499999; i++) {
+    for (int i = 1; i <= 499999; i++)
+    {
         A.push_back(i);
         A.push_back(i);
     }
@@ -97,7 +105,8 @@ int main(int argc, char *argv[]) {
     testP(A, &solution);
 
     A.clear();
-    for (int i = 1; i <= 499999; i++) {
+    for (int i = 1; i <= 499999; i++)
+    {
         A.push_back(i);
         A.push_back(i);
     }

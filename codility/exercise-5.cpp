@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     }
 
     std::cout << "Use program arguments to try your own inputs:" << std::endl;
-    std::cout << "  ie ./exercise-4 2 3 1 5" << std::endl << std::endl;
+    std::cout << "  ie ./exercise-5 2 3 1 5" << std::endl << std::endl;
     std::cout << "RUNNING CORRECTNESS TESTS" << std::endl;
 
     std::cout << std::endl << "Example Test :" << std::endl;
@@ -61,8 +61,8 @@ int main(int argc, char *argv[])
     std::cout << std::endl << "Double Elements :" << std::endl;
     A = {1, 3};
     test(A, 2, &solution);
-    A = {2, 4};
-    test(A, 3, &solution);
+    A = {2, 3};
+    test(A, 1, &solution);
 
     std::cout << std::endl << "Simple Tests :" << std::endl;
     A = {1, 2, 4};

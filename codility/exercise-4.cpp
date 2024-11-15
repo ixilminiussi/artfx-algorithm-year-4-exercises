@@ -51,19 +51,19 @@ int main(int argc, char *argv[])
     test(1, 1, 1, 0, &solution);
 
     std::cout << std::endl << "Many Small Jumps :" << std::endl;
-    test(0, 1000000, 1, 0, &solution);
-    test(10, 5000000, 3, 0, &solution);
+    test(0, 1000000, 1, 1000000, &solution);
+    test(10, 5000000, 3, 1666664, &solution);
 
     std::cout << std::endl << "Many Medium Jumps :" << std::endl;
-    test(0, 5000000, 100, 0, &solution);
-    test(100, 10000000, 250, 0, &solution);
+    test(0, 5000000, 100, 50000, &solution);
+    test(100, 10000000, 250, 40000, &solution);
 
     std::cout << std::endl << "Large Jump Intervals :" << std::endl;
-    test(0, 1000000000, 999999, 0, &solution);
-    test(500, 1000000000, 99999, 0, &solution);
+    test(0, 1000000000, 999999, 1001, &solution);
+    test(500, 1000000000, 99999, 10001, &solution);
 
     std::cout << std::endl << "Maximum Jump Scenario :" << std::endl;
-    test(0, 1000000000, 2, 0, &solution);
-    test(10, 1000000000, 99, 0, &solution);
-    test(5, 1000000000, 1283, 0, &solution);
+    test(0, 1000000000, 2, 500000000, &solution);
+    test(10, 1000000000, 99, 10101010, &solution);
+    test(5, 1000000000, 1283, 779424, &solution);
 }
